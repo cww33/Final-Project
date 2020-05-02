@@ -1,4 +1,4 @@
-
+import csv
 def to_usd(my_price):
     """
     Converts a numeric value to usd-formatted string, for printing and display purposes.
@@ -16,6 +16,17 @@ def space():
     print("\n")
 def dash():
     print("----------------------------------")
+def writetocsv():
+    file1 = open("SubsPrice.csv", "w")
+    writer = csv.writer(file1)
+    for new_sub_list, new_price_list in info2.items():
+        writer.writerow([new_sub_list, new_price_list])
+def write2csv():
+    file1 = open("SubsPrice.csv", "w")
+    writer = csv.writer(file1)
+    for sub_list, price_list in info.items():
+        writer.writerow([sub_list, price_list])
+
 subtotal=0
 salary=0
 monthly_salary=0
@@ -64,9 +75,8 @@ new_price_list=price_list
 info={sub_list[i]:price_list[i] for i in range(len(sub_list))}
 current_sub_price= sum(price_list)
 
-#loop new subs
-# format
-#underscore problem
+write2csv()
+
 space()
 print("Your Current Subscriptions are: ")
 line()
@@ -78,13 +88,20 @@ print("Total: " + to_usd(current_sub_price))
 line()
 
 
+
     
 if current_sub_price == allowance:
-    print("You have already reached your maximum allowance for subscriptions")
+    print("You have already matched your maximum allowance for subscriptions")
     print("No new subscriptions for you!")
 elif current_sub_price > allowance:
     print("You have already exceeded your allowance for subscriptions!")
     print("You need to remove a subscription that costs at least " + to_usd(current_sub_price-allowance))
+    line()
+    print("Writing to CSV File")
+    space()
+    print("Hope this has helped! Have a nice day!")
+
+
 else:
     space()
     print("You still have room in your allowance to add a subscription")
@@ -133,6 +150,7 @@ else:
 
                        
     price_str= str(allowance-new_sub_price)   
+    over_str = str(new_sub_price-allowance)
     info2={new_sub_list[i]:new_price_list[i] for i in range(len(new_sub_list))}
     space()
     print("Your Current Subscriptions are: ")
@@ -142,8 +160,13 @@ else:
     dash()
     print("Total: " + to_usd(new_sub_price))
     line()
-    print("Allowance left $" +(price_str))
-    line()
+    if allowance > new_sub_price:
+        print("Allowance left $" +(price_str))
+    else:
+        print("Amount you went over $" +(over_str))
+    line()          
+    print("Storing data to CSV file")
+    writetocsv()
     space()
     print("Hope this application helped! Have a nice day!")
         
