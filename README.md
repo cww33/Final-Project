@@ -1,4 +1,8 @@
-# Final-Project
+# Subscription Management
+
+## Program Use
+
+This program is to be used by someone who wonders whether or not they have room in their budget for more monthly subscriptions. The user will input into the application their monthly salary as well as the percentage of their salary they want to be their allowance for their subscriptions. Then they will input their current subscriptions and their prices and the application will tell them if they are under/over or right on budget. If they are under budget, they can choose to add more subscriptions to which the application will tell them if they can afford these new subscriptions and in the end tell them how much they went over or stayed under budget. 
 
 ## Setup
 
