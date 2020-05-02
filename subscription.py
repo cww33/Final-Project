@@ -16,14 +16,15 @@ def line():
     """
     print("______________________________________________")
 def space():
-     """ 
+    """ 
     Prints a return to make the outputs look more pleasing and more divided. 
     Adds an extra line before next set of information or user prompt shows up.
     Allows the user to read the next propmpt more easily
     """
     print("\n")
+
 def dash():
-     """ 
+    """ 
     Prints a dashed line to make the outputs look more pleasing and more divided. Allows the user to read the next propmpt more easily
     """
     print("----------------------------------")
@@ -168,8 +169,8 @@ else:
                     break
 
                        
-    price_str= str(allowance-new_sub_price)   
-    over_str = str(new_sub_price-allowance)
+    price_str= to_usd(allowance-new_sub_price)   
+    over_str = to_usd(new_sub_price-allowance)
     info2={new_sub_list[i]:new_price_list[i] for i in range(len(new_sub_list))}
     space()
     print("Your Current Subscriptions are: ")
