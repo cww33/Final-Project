@@ -11,17 +11,36 @@ def to_usd(my_price):
     """  
     return f" ${my_price:,.2f}"
 def line():
+    """ 
+    Prints a solid line to make the outputs look more pleasing and more divided. Allows the user to read the next propmpt more easily
+    """
     print("______________________________________________")
 def space():
+     """ 
+    Prints a return to make the outputs look more pleasing and more divided. 
+    Adds an extra line before next set of information or user prompt shows up.
+    Allows the user to read the next propmpt more easily
+    """
     print("\n")
 def dash():
+     """ 
+    Prints a dashed line to make the outputs look more pleasing and more divided. Allows the user to read the next propmpt more easily
+    """
     print("----------------------------------")
 def writetocsv():
+    '''
+    writes to a csv file so the user can look back on the information later in time.
+    This one is for if the user wants to input more subscriptions they are thinking of adding.
+    '''
     file1 = open("SubsPrice.csv", "w")
     writer = csv.writer(file1)
     for new_sub_list, new_price_list in info2.items():
         writer.writerow([new_sub_list, new_price_list])
 def write2csv():
+    '''
+    writes to a csv file so the user can look back on the information later in time.
+    This one is for if the user does not want to input more subscriptions.
+    '''
     file1 = open("SubsPrice.csv", "w")
     writer = csv.writer(file1)
     for sub_list, price_list in info.items():
