@@ -34,6 +34,13 @@ This will activate the virtual environment. From within the virtual environment,
 ```
 python subscription.py
 ```
+## Program Operations
+
+### Program Input Statements
+
+The program will ask you to input a myraid of information which include your monthly salary, percentage of salary you would like to allocate to your monthly subscriptions, and your monthly subscriptions. When inputting your list for your current subscriptions, input one subscription, hit enter, input the price, hit enter, and so on until you have added all your current subscriptions. When you are done entering your subscriptions, enter "done".
+
+If you still have allowance left for your subscriptions after you have inputted all your subscriptions, the program will ask you whether or not you have any new subscriptions you may want to add to check if you can afford the subscription. Input "Y" for yes and any other key for no. 
 
 ### Program Output
 
