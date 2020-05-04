@@ -70,9 +70,10 @@ if __name__ == "__main__":
             print("Please Input a Number")
         else:
             break
-        
+     
     allowance = float(total_salary)*(float(percentage)/100)
     while True:
+        print("When you are done inputting, remember to enter *Done* !")
         subscription = input("Please input a subscription you have subscribed to: ")
         sub_list.append(subscription)
         if subscription.upper() == ("DONE"):
