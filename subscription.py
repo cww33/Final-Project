@@ -74,7 +74,7 @@ if __name__ == "__main__":
     allowance = float(total_salary)*(float(percentage)/100)
     while True:
         print("When you are done inputting, remember to enter *Done* !")
-        subscription = input("Please input a subscription you have subscribed to: ")
+        subscription = input("Please input a subscription you are currently subscribed to: ")
         sub_list.append(subscription)
         if subscription.upper() == ("DONE"):
             sub_list=sub_list[:-1]
